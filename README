@@ -1,0 +1,14 @@
+devbox is debugging SMTP server bound to localhost. Useful
+for when you need to test outgoing mail but do not want any
+mail actually sent. All incoming  messages are saved in a maildir 
+for later perusal regardless of any possible address. 
+What comes in won't come out.
+
+There are several mail readers that can handle maildir format, evolution, balsa, pine and mutt are examples.
+Default port is 25 and default directory for the maildir is ~/.devbox
+
+Ex start with defaults, root priviliges are needed for to listen on port 25:
+$ sudo ./devbox.py
+
+With port 2525 and a different maildir:
+$ ./devbox.py -p 2525 -m /tmp/mails
